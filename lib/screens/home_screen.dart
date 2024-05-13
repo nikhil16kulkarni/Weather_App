@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
     try {
       // Get latitude and longitude for the city using Geocoding API
       final response = await http.get(Uri.parse(
-          'http://api.openweathermap.org/geo/1.0/direct?q=$cityName&limit=1&appid=2992c0652da8302548c78a7ada23316b'));
+          'http://api.openweathermap.org/geo/1.0/direct?q=$cityName&limit=1&appid=YOUR_API_KEY'));
 
       if (response.statusCode == 200) {
         final List<dynamic> data = jsonDecode(response.body);
